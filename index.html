@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature Escapes</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background: #f0f8ff;
+      color: #333;
+      padding: 20px;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2e8b57;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+    }
+
+    nav .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Flexbox Section */
+    .intro {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .intro img {
+      max-width: 45%;
+      border-radius: 10px;
+    }
+
+    .intro-text {
+      flex: 1;
+      margin: 20px;
+    }
+
+    /* Grid Layout for Places */
+    .places {
+      margin-top: 40px;
+    }
+
+    .places h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .place-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .place-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .place-card .info {
+      padding: 15px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .intro {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav .logo {
+        margin-bottom: 10px;
+      }
+
+      .intro img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">NatureEscapes</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Destinations</a></li>
+      <li><a href="#">Gallery</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Flexbox Section -->
+  <section class="intro">
+    <div class="intro-text">
+      <h1>Explore the Beauty of Nature</h1>
+      <p>
+        Discover breathtaking locations across the globe that bring you closer to nature. From tranquil forests to majestic mountains, your journey to serenity starts here.
+      </p>
+    </div>
+    <img src="https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg" alt="Nature View" />
+  </section>
+
+  <!-- Grid Layout: Places to Visit -->
+  <section class="places">
+    <h2>Top Places to Visit</h2>
+    <div class="grid-container">
+      <div class="place-card">
+        <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Mountain">
+        <div class="info">
+          <h3>Swiss Alps</h3>
+          <p>Snow-capped peaks, cozy cabins, and endless adventure await.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <img src="https://images.pexels.com/photos/1062249/pexels-photo-1062249.jpeg" alt="Lake">
+        <div class="info">
+          <h3>Banff National Park</h3>
+          <p>Crystal clear lakes surrounded by towering peaks in Canada.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <img src="https://images.pexels.com/photos/358482/pexels-photo-358482.jpeg" alt="Forest">
+        <div class="info">
+          <h3>Black Forest, Germany</h3>
+          <p>A mystical landscape of dense trees and fairytale trails.</p>
+        </div>
+      </div>
+
+      <div class="place-card">
+        <img src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg" alt="Beach">
+        <div class="info">
+          <h3>Bora Bora</h3>
+          <p>Turquoise waters and overwater bungalows in paradise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
